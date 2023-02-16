@@ -31,3 +31,7 @@ const authMiddleware = async (req, res, next) => {
 }
 
 module.exports = authMiddleware 
+
+//  IMPORT THIS authMiddleware IN ROUTER FILES WHERE YOU WANT TO PROTECT ROUTES
+//  CAN BE USED AS :-
+//    router.post('/createPost',authMiddleware,postController.createPost) i.e by passing it as second argument 
