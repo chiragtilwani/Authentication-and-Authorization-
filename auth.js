@@ -52,6 +52,7 @@ const login = async (req, res,next) => {
     const {username_email,password} = req.body
     
     let foundUser;
+    
     try{
         foundUser = await User.findOne({$or:[{username:username_email},{email:username_email}]})
     }catch(err){
